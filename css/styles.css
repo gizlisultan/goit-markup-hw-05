@@ -692,7 +692,7 @@ button:focus {
 .pic-item:hover .card-overlay {
   transform: translatey(0);
 }
-.card {
+.picture {
   position: relative;
   overflow: hidden;
 }
@@ -744,6 +744,9 @@ button:focus {
 }
 .pic-list .pic {
   margin-bottom: 8px;
+}
+.pic-link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*Footer*/
 .page-footer .container {
