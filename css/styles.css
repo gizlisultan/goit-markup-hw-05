@@ -211,7 +211,6 @@ header .studio {
 
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sitenav {
   display: flex;
@@ -225,6 +224,7 @@ header .studio {
   display: block;
   /* margin-top: 24px;
   margin-bottom: 24px;*/
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   font-weight: 500;
   font-size: 16px;
@@ -390,10 +390,9 @@ header .studio {
 }
 .modal-button {
   border-radius: 50%;
-  /*float: right;
   display: flex;
   justify-content: center;
-  align-items: center;*/
+  align-items: center;
 
   position: absolute;
   top: 24px;
@@ -408,7 +407,8 @@ header .studio {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-button:hover .modal-button:focus {
+.modal-button:hover,
+.modal-button:focus {
   background-color: #404bbf;
   border: none;
 }
@@ -663,6 +663,12 @@ button:focus {
 }
 .container .button-item:not(:last-child) {
   margin-right: 24px;
+}
+.button-item {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*Pictures*/
 
