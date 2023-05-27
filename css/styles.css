@@ -208,6 +208,8 @@ header .studio {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--accent);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sitenav {
   display: flex;
@@ -263,6 +265,9 @@ header .studio {
 .address .address-item:not(:last-child) {
   margin-right: 40px;
 }
+.address-item {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .address .link {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -288,6 +293,7 @@ header .studio {
   align-items: center;
   max-width: 1440px;
   height: 600px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding-top: 188px;
   padding-bottom: 188px;
   margin-left: auto;
@@ -354,9 +360,12 @@ header .studio {
   width: 100%;
   height: 100%;
 
-  background-color: rgba(46, 47, 66, 0.7);
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-hidden {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -374,15 +383,40 @@ header .studio {
   background-color: #fcfcfc;
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 3px 0px #0000001f,
     0px 1px 1px 0px #00000024;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button {
   border-radius: 50%;
-  float: right;
+  /*float: right;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center;*/
 
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button:hover .modal-button:focus {
+  background-color: #404bbf;
+  border: none;
+}
+.modal-button .close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-button .close:hover,
+.modal-button:focus {
+  fill: #ffffff;
+}
 h2 {
   color: var(--secondary-text-color);
   font-weight: 700;
@@ -475,6 +509,7 @@ h3 {
   height: 100%;
   border-radius: 50%;
   background-color: var(--accent);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-link:hover,
 .team-link:focus {
@@ -559,6 +594,8 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .custom-link:focus,
 .custom-link:hover {
@@ -753,6 +790,7 @@ footer .studio {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: bakcground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-link:hover,
 .icon-link:focus {
