@@ -683,16 +683,22 @@ button:focus {
   width: 100%;
   height: 100%;
   background-color: #3f51b5;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--button-background-color);
 
   transform: translatey(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay .overlay-paragraph {
-  color: #fff;
+/*.overlay .overlay-paragraph {
   padding: 10px;
-  font-size: 18px;
-}
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--button-background-color);
+}*/
 .pic-item:hover .overlay {
   transform: translatey(0);
 }
