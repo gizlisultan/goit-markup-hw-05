@@ -693,7 +693,7 @@ button:focus {
 }
 .pic-item:hover .overlay,
 .pic-item:focus .overlay {
-  transform: translatey(0);
+  transform: translatey(0, 0);
 }
 .pic-item {
   position: relative;
